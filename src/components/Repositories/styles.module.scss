@@ -1,0 +1,40 @@
+.container {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #3e3d3d;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #494949;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+
+  &_label {
+    width: 100%;
+    font-weight: 700;
+    text-align: start;
+    background: #232323;
+    align-self: flex-start;
+    padding: 12px 0 5px 10px;
+  }
+}
+
+.loading {
+  margin: 50px;
+  font-size: 20px;
+}

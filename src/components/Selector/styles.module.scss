@@ -1,0 +1,10 @@
+.selector_container {
+  padding: 5px;
+  border-radius: 3px;
+  background: #282828;
+
+  &:focus-visible {
+    outline-color: #343434;
+    outline-style: solid;
+  }
+}
