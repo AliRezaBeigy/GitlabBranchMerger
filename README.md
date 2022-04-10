@@ -5,10 +5,10 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/AliRezaBeigy/GitlabBranchMerger?style=for-the-badge)
 
 An extension to merge branches in Gitlab fast and easy
-<p align="center">
-  <img width="500" src="https://raw.githubusercontent.com/AliRezaBeigy/GitlabBranchMerger/master/screenshots/1.png">
-  <img width="500" src="https://raw.githubusercontent.com/AliRezaBeigy/GitlabBranchMerger/master/screenshots/2.png">
-</p>
+
+Screenshot | Screenshot
+--- | ---
+![](https://raw.githubusercontent.com/AliRezaBeigy/GitlabBranchMerger/master/screenshots/1.png) | ![](https://raw.githubusercontent.com/AliRezaBeigy/GitlabBranchMerger/master/screenshots/2.png)
 
 ## Install
 There is 3 way to install extension:
