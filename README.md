@@ -4,7 +4,7 @@
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 ![GitHub Repo stars](https://img.shields.io/github/stars/AliRezaBeigy/GitlabBranchMerger?style=for-the-badge)
 
-An extension to merge branches in Gitlab fast and easy
+An extension to merge branches in Gitlab faster and easier
 
 Screenshot | Screenshot
 --- | ---
