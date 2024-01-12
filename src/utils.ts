@@ -88,7 +88,7 @@ export async function mergeMergeRequest(
   toBranch?: string
 ) {
   return await fetch(
-    `${repository.url}/-/merge_requests/new?merge_request%5Bsource_project_id%5D=${repository.id}&merge_request%5Bsource_branch%5D=${fromBranch}&merge_request%5Btarget_project_id%5D=${repository.id}&merge_request%5Btarget_branch%5D=${toBranch}`
+    `${repository.url}/-/merge_requests/${mergeRequest.mergeRequestId}`
   )
     .then((response) => response.text())
     .then(async (html) => {
@@ -98,14 +98,13 @@ export async function mergeMergeRequest(
         .querySelector('meta[name="csrf-token"]')
         ?.getAttribute('content')
         ?.valueOf();
-      const merge_request_diff_head_sha = doc
-        .querySelector('input[name="merge_request_diff_head_sha"]')
-        ?.getAttribute('value')
-        ?.valueOf();
+      const merge_request_diff_head_sha = doc.querySelector('div[id="js-vue-mr-discussions"]')!
+          .getAttribute('data-noteable-data')!.valueOf();
+
       const data: any = {
         squash: false,
-        sha: merge_request_diff_head_sha,
         should_remove_source_branch: false,
+          sha: JSON.parse(merge_request_diff_head_sha).diff_head_sha,
         squash_commit_message: `Merge from ${fromBranch} to ${toBranch}`,
         commit_message: `Merge branch '${fromBranch}' into '${toBranch}'\n\nMerge from ${fromBranch} to ${toBranch}\n\nSee merge request ${repository.group}/${repository.name}!${mergeRequest.mergeRequestId}`,
       };

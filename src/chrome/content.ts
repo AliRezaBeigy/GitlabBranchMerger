@@ -20,7 +20,7 @@ const messagesFromReactAppListener = (
 
   if (message.messageType === MessageType.GetCurrentRepository) {
     const aTag = document.querySelector(
-      'a[data-qa-menu-item="Project scope"]'
+      'a[data-track-label="project_overview"]'
     ) as HTMLAnchorElement;
     const body = document.querySelector('body');
     const repository: Repository = {
